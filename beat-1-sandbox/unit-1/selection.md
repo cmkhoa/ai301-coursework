@@ -126,15 +126,41 @@ REJECTED: none of the graded candidates were rejected.
 
 **Run history**
 
-[TODO — fill in after the confirming full eval run: the agreement score of
-each run, in order; the last score must match the agreement line in the
-committed `eval-run.txt`.]
+Three runs, in order:
+
+1. Smoke run (`--limit 3`, partial, does not count as a submitted run):
+   `agreement: 2/3 scored items` — issue-01 disagreed
+   (`issue-01  accept  reject   NO     failed: bounded-scope`).
+2. Targeted re-run after revising the `bounded-scope` check
+   (`--only issue-01,issue-05,issue-10`, partial):
+   `agreement: 3/3 scored items`.
+3. Confirming full run, the one saved to `eval-run.txt`:
+   `agreement: 20/20 scored items  (bar: 18/20: PASS)` with
+   `categories: claimed 4/4  clear-accept 8/8  dead-repo 3/3  policy 1/1  scope 4/4`.
 
 **Issue analysis**
 
-[TODO — fill in after the eval run: one scored issue by id, my rubric's
-decision, the gold label, and the reasoning that produced my rubric's
-result.]
+`issue-01` (conda/conda#16475, category clear-accept). Gold label:
+`accept` — the gold note reads "docs task with a stated home and scope;
+active repo, unclaimed". My rubric's final decision: `accept`, but its
+first draft rejected it on `bounded-scope`, and the reasoning behind both
+results is instructive. The issue's body is a multi-section plan: "Add a
+new task page", then "Update `manage-pkgs.rst`", "Update
+`pip-interoperability.rst`", "Update `new-features.md`", and "Consider a
+global `troubleshooting.rst` entry". My original check failed any issue
+that was "an umbrella/tracking/mega issue listing sub-items meant to be
+split up", and a five-heading task list pattern-matched that clause, so
+the grader read the docs plan as an umbrella issue and rejected. The
+distinction the first draft missed is who the sub-items are for: an
+umbrella issue's checklist is independent work items meant to be picked
+up separately, while issue-01's sections are steps of one deliverable —
+one new docs page plus updates to the existing pages that must point at
+it, all landing together in a single PR. After I rewrote the clause to
+say that "a single task that touches several named files in service of
+one deliverable ... is still ONE bounded change and passes", the rubric
+graded it `accept`, agreeing with gold, while the true umbrella issues
+(issue-05's codebase-wide typing effort and issue-10's self-described
+megaissue) still rejected.
 
 **Check rationale**
 
