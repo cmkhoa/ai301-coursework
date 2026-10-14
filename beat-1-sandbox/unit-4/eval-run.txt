@@ -1,12 +1,55 @@
-Replace this file with your unit-4 eval run.
+# eval run written by run_eval.py at 2026-10-14T02:10:55Z
+# model: sonnet (pinned)
+# graded: /Users/mkc/.claude/skills/pr-precheck
+# packages: 20 scored
+#   SKILL.md  sha256:a0218486bae02ddb
+#   rubric.md  sha256:f504c7193388039a
+#   procedure.md  sha256:a6be912d2d3f5a99
+#   evidence-guide.md  sha256:f1aa2de8db95e781
+#
+grading 20 package(s) with the tool at /Users/mkc/.claude/skills/pr-precheck, model sonnet, 5 worker(s)...
+  pkg-03: reject
+  pkg-01: reject
+  pkg-02: accept
+  pkg-04: reject
+  pkg-05: accept
+  pkg-07: reject
+  pkg-06: reject
+  pkg-09: reject
+  pkg-10: reject
+  pkg-08: reject
+  pkg-12: reject
+  pkg-15: reject
+  pkg-11: accept
+  pkg-14: reject
+  pkg-13: reject
+  pkg-17: reject
+  pkg-16: accept
+  pkg-18: reject
+  pkg-19: accept
+  pkg-20: reject
 
-Generate it with `--save-run`: the harness writes this file itself, with
-a header recording the model, the tool it graded, and a fingerprint of
-each file in the run.
+item    category        gold    verdict  agree  note
+pkg-01  standards-wall  reject  reject   yes    
+pkg-02  clear-accept    accept  accept   yes    
+pkg-03  silent-drift    reject  reject   yes    
+pkg-04  not-tested      reject  reject   yes    
+pkg-05  clear-accept    accept  accept   yes    
+pkg-06  silent-drift    reject  reject   yes    
+pkg-07  not-tested      reject  reject   yes    
+pkg-08  clear-accept    accept  reject   NO     failed: decisive-test-evidence
+pkg-09  silent-drift    reject  reject   yes    
+pkg-10  not-tested      reject  reject   yes    
+pkg-11  clear-accept    accept  accept   yes    
+pkg-12  unreviewable    reject  reject   yes    
+pkg-13  clear-accept    accept  reject   NO     failed: decisive-test-evidence, honest-notes
+pkg-14  not-tested      reject  reject   yes    
+pkg-15  unreviewable    reject  reject   yes    
+pkg-16  clear-accept    accept  accept   yes    
+pkg-17  silent-drift    reject  reject   yes    
+pkg-18  unreviewable    reject  reject   yes    
+pkg-19  clear-accept    accept  accept   yes    
+pkg-20  standards-wall  reject  reject   yes    
 
-    python3 run_eval.py <your flags> --save-run eval-run.txt
-
-A partial `--limit` or `--only` run refuses to write the file, so only a
-complete run can land here. Do not hand-edit it: the story of the runs it
-took belongs in this unit's write-up, in the four fields below it:
-Run history, Package analysis, Check rationale, and Trade-offs.
+categories: clear-accept 5/7  not-tested 4/4  silent-drift 4/4  standards-wall 2/2  unreviewable 3/3
+agreement: 18/20 scored items  (bar: 18/20: PASS)

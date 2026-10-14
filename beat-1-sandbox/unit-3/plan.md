@@ -196,7 +196,16 @@ Two things worth recording even though neither moved the plan:
   between issue, marker and test readable. The plan did not specify
   either way; this is how it landed.
 
+- **The machine's OS moved between the plan and the PR.** This plan
+  records macOS 26.6.2; the before/after evidence in `test_evidence.md`
+  and in the PR description was captured on macOS 27.0.1 (arm64), same
+  machine, after an OS upgrade in between. Python 3.11.16, passlib
+  1.7.4 and bcrypt 4.3.0 are unchanged, and every row of the test plan
+  produced the observable it predicted, so nothing about the fix turns
+  on it. Recording it so the two documents' environment lines can be
+  reconciled rather than read as a contradiction.
+
 The test plan ran as written: rows 1-5 all produced the expected
 observables, with the before output captured on the same machine by
-stashing the change. No surprises, so nothing to amend on the posted
+checking out `main`. No surprises, so nothing to amend on the posted
 comment.
