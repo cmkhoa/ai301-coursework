@@ -1,30 +1,30 @@
-# eval run written by run_eval.py at 2026-10-14T02:10:55Z
+# eval run written by run_eval.py at 2026-10-14T02:42:07Z
 # model: sonnet (pinned)
 # graded: /Users/mkc/.claude/skills/pr-precheck
 # packages: 20 scored
 #   SKILL.md  sha256:a0218486bae02ddb
-#   rubric.md  sha256:f504c7193388039a
+#   rubric.md  sha256:95a2c51024fc582d
 #   procedure.md  sha256:a6be912d2d3f5a99
-#   evidence-guide.md  sha256:f1aa2de8db95e781
+#   evidence-guide.md  sha256:7539b38460e1d2cc
 #
 grading 20 package(s) with the tool at /Users/mkc/.claude/skills/pr-precheck, model sonnet, 5 worker(s)...
   pkg-03: reject
+  pkg-05: accept
   pkg-01: reject
   pkg-02: accept
   pkg-04: reject
-  pkg-05: accept
   pkg-07: reject
   pkg-06: reject
+  pkg-08: accept
   pkg-09: reject
   pkg-10: reject
-  pkg-08: reject
   pkg-12: reject
-  pkg-15: reject
   pkg-11: accept
   pkg-14: reject
-  pkg-13: reject
-  pkg-17: reject
+  pkg-13: accept
+  pkg-15: reject
   pkg-16: accept
+  pkg-17: reject
   pkg-18: reject
   pkg-19: accept
   pkg-20: reject
@@ -37,12 +37,12 @@ pkg-04  not-tested      reject  reject   yes
 pkg-05  clear-accept    accept  accept   yes    
 pkg-06  silent-drift    reject  reject   yes    
 pkg-07  not-tested      reject  reject   yes    
-pkg-08  clear-accept    accept  reject   NO     failed: decisive-test-evidence
+pkg-08  clear-accept    accept  accept   yes    
 pkg-09  silent-drift    reject  reject   yes    
 pkg-10  not-tested      reject  reject   yes    
 pkg-11  clear-accept    accept  accept   yes    
 pkg-12  unreviewable    reject  reject   yes    
-pkg-13  clear-accept    accept  reject   NO     failed: decisive-test-evidence, honest-notes
+pkg-13  clear-accept    accept  accept   yes    
 pkg-14  not-tested      reject  reject   yes    
 pkg-15  unreviewable    reject  reject   yes    
 pkg-16  clear-accept    accept  accept   yes    
@@ -51,5 +51,5 @@ pkg-18  unreviewable    reject  reject   yes
 pkg-19  clear-accept    accept  accept   yes    
 pkg-20  standards-wall  reject  reject   yes    
 
-categories: clear-accept 5/7  not-tested 4/4  silent-drift 4/4  standards-wall 2/2  unreviewable 3/3
-agreement: 18/20 scored items  (bar: 18/20: PASS)
+categories: clear-accept 7/7  not-tested 4/4  silent-drift 4/4  standards-wall 2/2  unreviewable 3/3
+agreement: 20/20 scored items  (bar: 18/20: PASS)

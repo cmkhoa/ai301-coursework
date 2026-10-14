@@ -28,10 +28,15 @@ against the Test plan in `plan.md` and the Testing section of `pr_draft.md`.
 **What good looks like.** The plan's own repro is re-run on the path that
 actually breaks (not a control), with a named observable that flips
 (exception to `False`, exit status, output line), every failure mode in the
-plan's test plan covered or disclosed, and the repo's checks pasted with
-outcomes. "tested locally, tests pass" with no command or output is not
-evidence. A check that failed or "no tests ran" pasted honestly with its
-reason counts.
+plan's test plan covered or disclosed, and the repo's checks reported with
+their outcomes. "tested locally, tests pass", "works now" and "verified on my
+machine" are not evidence, because they identify no observable. What makes
+evidence decisive is the named observable, not the format it arrives in: some
+changes produce nothing pasteable, so a transcribed before/after of a TUI
+keystroke or a rendered page is as decisive as a pasted stdout transcript when
+it names the specific state on each side, and a named check reported as passing
+counts as shown. A check that failed or "no tests ran" reported honestly with
+its reason counts.
 
 ## Diff quality (harness category: unreviewable)
 
